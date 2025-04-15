@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Links | Utaitai & DirectLuxe</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/umami-js@1.0.4/dist/umami.js"></script>
     <style>
         body { 
             background: #ffecf1; 
@@ -19,7 +20,7 @@
         }
         h1 {
             font-size: 1.5rem;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
         .pixel-button {
             display: block;
@@ -40,18 +41,81 @@
         }
         .project-desc {
             font-size: 0.6rem;
-            margin-top: 5px;
+            margin: 5px auto 20px;
             color: #7a5d9a;
+            max-width: 300px;
+        }
+        .pixel-art {
+            margin: 20px auto;
+            width: 80px;
+            height: 80px;
+            position: relative;
+        }
+        .pixel-character {
+            width: 80px;
+            height: 80px;
+            background: #ff9bb3;
+            border: 3px solid #5a3d7a;
+            position: relative;
+        }
+        .pixel-eye {
+            width: 10px;
+            height: 10px;
+            background: #5a3d7a;
+            position: absolute;
+            top: 30px;
+        }
+        .pixel-eye.left { left: 20px; }
+        .pixel-eye.right { right: 20px; }
+        .pixel-mouth {
+            width: 20px;
+            height: 5px;
+            background: #5a3d7a;
+            position: absolute;
+            bottom: 25px;
+            left: 30px;
+        }
+        .pixel-arm {
+            width: 15px;
+            height: 5px;
+            background: #ff9bb3;
+            border: 2px solid #5a3d7a;
+            position: absolute;
+            top: 40px;
+            animation: wave 1s infinite alternate;
+        }
+        .pixel-arm.right { right: -15px; }
+        @keyframes wave {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(-20deg); }
+        }
+        .counter {
+            font-size: 0.7rem;
+            margin: 10px 0;
+            color: #5a3d7a;
         }
         footer {
-            margin-top: 40px;
+            margin-top: 20px;
             font-size: 0.6rem;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Pixel Art Character -->
+        <div class="pixel-art">
+            <div class="pixel-character">
+                <div class="pixel-eye left"></div>
+                <div class="pixel-eye right"></div>
+                <div class="pixel-mouth"></div>
+                <div class="pixel-arm right"></div>
+            </div>
+        </div>
+
         <h1>MY PROJECTS</h1>
+        
+        <!-- Visitor Counter -->
+        <div class="counter">Visitors: <span id="counter">0</span></div>
         
         <!-- Utaitai Link -->
         <a href="https://www.utaitai.com" class="pixel-button">UTAITAI</a>
@@ -63,5 +127,18 @@
         
         <footer>Made with ❤️ & pixels</footer>
     </div>
+
+    <!-- Visitor Counter Script -->
+    <script>
+        // Simple counter (uses localStorage to track visits)
+        if (localStorage.getItem('visits')) {
+            let visits = parseInt(localStorage.getItem('visits')) + 1;
+            localStorage.setItem('visits', visits);
+            document.getElementById('counter').textContent = visits;
+        } else {
+            localStorage.setItem('visits', 1);
+            document.getElementById('counter').textContent = 1;
+        }
+    </script>
 </body>
 </html>
