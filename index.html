@@ -19,7 +19,7 @@
         h1 {
             font-family: 'Space Mono', monospace;
             color: #1a365d;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             font-weight: 600;
         }
         .link-card {
@@ -30,6 +30,8 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             transition: transform 0.2s, box-shadow 0.2s;
             max-width: 400px;
+            text-decoration: none;
+            display: block;
         }
         .link-card:hover {
             transform: translateY(-2px);
@@ -38,22 +40,23 @@
         .link-title {
             font-weight: 600;
             color: #1a365d;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
         }
         .link-desc {
             font-size: 0.9rem;
             color: #4a5568;
         }
-        .email {
+        .footer {
             margin-top: 2rem;
             font-size: 0.9rem;
-            color: #4a5568;
+            color: #718096;
+            font-style: italic;
         }
         .counter {
             font-family: 'Space Mono', monospace;
             font-size: 0.8rem;
             color: #718096;
-            margin: 1.5rem 0;
+            margin-bottom: 1.5rem;
         }
     </style>
 </head>
@@ -62,23 +65,21 @@
     <div class="counter">Visitors: <span id="counter">0</span></div>
     
     <a href="https://www.utaitai.com" class="link-card">
-        <div class="link-title">UTAITAI</div>
-        <div class="link-desc">Learn Japanese through song lyrics</div>
+        <div class="link-title">🎵 UTAITAI</div>
+        <div class="link-desc">Learn Japanese through music</div>
     </a>
     
     <a href="https://www.directluxe.shop" class="link-card">
-        <div class="link-title">DIRECTLUXE</div>
-        <div class="link-desc">Source directly from Chinese manufacturers</div>
+        <div class="link-title">🏭 DIRECTLUXE</div>
+        <div class="link-desc">Source straight from China</div>
     </a>
     
     <a href="mailto:hcb3o.tech@gmail.com" class="link-card">
-        <div class="link-title">CONTACT</div>
-        <div class="link-desc">hcb3o.tech@gmail.com (ex-MSFT)</div>
+        <div class="link-title">✉️ CONTACT</div>
+        <div class="link-desc">ex-MSFT builder</div>
     </a>
     
-    <div class="email">
-        Built with 💕 from Seattle
-    </div>
+    <div class="footer">Built with ♥ from Seattle</div>
 
     <script>
         // Visitor counter
