@@ -1,16 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Pixel Links</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Links | Utaitai & DirectLuxe</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         body { 
             background: #ffecf1; 
             font-family: 'Press Start 2P', cursive; 
             text-align: center; 
-            padding: 20px; 
+            padding: 20px;
+            color: #5a3d7a;
         }
-        h1 { color: #5a3d7a; }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
         .pixel-button {
             display: block;
             margin: 15px auto;
@@ -19,19 +29,39 @@
             color: #5a3d7a;
             text-decoration: none;
             border: 3px solid #5a3d7a;
-            font-family: 'Press Start 2P', cursive;
+            font-size: 0.8rem;
             width: 80%;
             max-width: 300px;
+            transition: transform 0.2s;
         }
-        .pixel-button:hover { background: #ffb6c8; }
-        footer { margin-top: 30px; font-size: 0.7rem; }
+        .pixel-button:hover {
+            transform: translateY(-3px);
+            background: #ffb6c8;
+        }
+        .project-desc {
+            font-size: 0.6rem;
+            margin-top: 5px;
+            color: #7a5d9a;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 0.6rem;
+        }
     </style>
 </head>
 <body>
-    <h1>MY LINKS</h1>
-    <a href="https://instagram.com/you" class="pixel-button">Instagram</a>
-    <a href="https://youtube.com/you" class="pixel-button">YouTube</a>
-    <a href="https://github.com/you" class="pixel-button">GitHub</a>
-    <footer>Made with ❤️ & pixels</footer>
+    <div class="container">
+        <h1>MY PROJECTS</h1>
+        
+        <!-- Utaitai Link -->
+        <a href="https://www.utaitai.com" class="pixel-button">UTAITAI</a>
+        <div class="project-desc">Learn Japanese through song lyrics</div>
+        
+        <!-- DirectLuxe Link -->
+        <a href="https://www.directluxe.shop" class="pixel-button">DIRECTLUXE</a>
+        <div class="project-desc">Access Chinese manufacturers directly</div>
+        
+        <footer>Made with ❤️ & pixels</footer>
+    </div>
 </body>
 </html>
